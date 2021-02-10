@@ -15,4 +15,9 @@ const Header: FC<Props> = ({ title, keywords }) => {
   );
 };
 
+Header.defaultProps = {
+  title: "Web Page",
+  keywords: ["site", "webpage"],
+};
+
 export default Header;
