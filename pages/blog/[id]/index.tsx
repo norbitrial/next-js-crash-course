@@ -12,7 +12,11 @@ const BlogPost = ({ blogPost }) => {
           <p>
             <strong>Title:</strong> {blogPost.title}
           </p>
-          <p style={{ fontSize: "0.75rem" }}>{blogPost.body}</p>
+          <p style={{ fontSize: "0.75rem" }}>
+            <span
+              dangerouslySetInnerHTML={{ __html: blogPost.description }}
+            ></span>
+          </p>
         </>
       ) : (
         <span>Not found :(</span>
@@ -23,7 +27,7 @@ const BlogPost = ({ blogPost }) => {
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
+    `http://localhost:3000/api/posts/${context.params.id}`
   );
 
   const blogPost = await res.json();
@@ -36,7 +40,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const res = await fetch("http://localhost:3000/api/posts");
 
   const blogPosts = await res.json();
 
