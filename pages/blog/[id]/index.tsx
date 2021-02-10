@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Header from "../../../components/Header";
 
 const BlogPost = ({ blogPost }) => {
   const router = useRouter();
@@ -8,6 +9,7 @@ const BlogPost = ({ blogPost }) => {
     <div>
       {blogPost.id ? (
         <>
+          <Header title={blogPost.title} keywords={blogPost.hashtags} />
           <h1>{`this would be a random blog post with id ${blogPost.id}`}</h1>
           <p>
             <strong>Title:</strong> {blogPost.title}
