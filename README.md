@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+This repo is following the [Next.js Crash Course 2021](https://www.youtube.com/watch?v=mTz0GXj8NN0) YouTube video.
+
 First, run the development server:
 
 ```bash
