@@ -1,12 +1,10 @@
-import Head from "next/head";
+import Header from "../components/head";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Welcome!</title>
-        <meta name="keywords" content="web development, react" />
-      </Head>
+      <Header title="Welcome page" keywords={["web development", "react"]} />
+
       <h1>Welcome Page</h1>
     </div>
   );
