@@ -1,5 +1,6 @@
 import { ReactChild } from "react";
 import { FC } from "react";
+import Nav from "./Nav";
 import styles from "../styles/Layout.module.css";
 
 type Props = {
@@ -8,9 +9,12 @@ type Props = {
 
 const Layout: FC<Props> = ({ children }) => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>{children}</main>
-    </div>
+    <>
+      <Nav />
+      <div className={styles.container}>
+        <main className={styles.main}>{children}</main>
+      </div>
+    </>
   );
 };
 
